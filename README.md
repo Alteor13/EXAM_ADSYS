@@ -41,14 +41,15 @@ Aucune erreur detectee dans les tests depuis le debut.
 
 # Modifications apportees par rapport a la version precedente
 
-Correction du code game_target_v3 : 
+Correction du code game_target_v3 :
+
     - Le robot ne peux desormais plus etre place à l'exterieur de la grille
     
     - Modification du contenu de la grille depend d'une nouvelle fonction mov
     permettant de securiser le processus d'edition
 
     - La modification de la grille n'est plus dependante de son affichage
-    
+
     - Correction du code conformement a la norme pep8 (addition de docstrings sur toutes les fonctions et classes, nettoyage et epuration de la structure du code, suppressio de normes inutiles, etc...)
 
 # Installation du package Game : 
