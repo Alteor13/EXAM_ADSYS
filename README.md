@@ -1,13 +1,13 @@
 # Auteur : Martin CHARRONDIERE
 
-Deuxieme version de game_target
+Troisieme version de game_target
 
 # Contenu du projet
 
 Package Game : Contient l'essentiel du code, module instalable avec setup.py (voir README associe)
 Dossier Images : Contient quelques images d'illustration
 
-setup.py : Permet l'intsalaation du package Game en local.
+setup.py : Permet l'instalation du package Game en local.
 
 # Principe
 
@@ -67,7 +67,7 @@ pip install C:\chemin\vers\votre\package\dist\nom_de_votre_package-1.0.0.tar.gz
 
 # Automatisation des phases de test
 
-Non implementee pour le moment
+Non implementee pour le moment.
 
 # Structure de l'arborescence
 

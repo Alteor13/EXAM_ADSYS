@@ -57,3 +57,6 @@ def test_game():
 test_robot()
 test_grid()
 test_game()
+
+# Batterie a ameliorer pour verifie a la main que chaque fonction renvoie 
+# un resultat conforme, et qu'elle est testee dans tous les cas de figure
