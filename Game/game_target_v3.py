@@ -75,6 +75,15 @@ class Robot:
         if self.x < grid_width - 1:
             self.x += 1
 
+    def check_pos_robot (self,g):
+        """
+        @param une grille g
+        @return /
+        """
+        if (self.x > (g.width-1)) or (self.y > (g.height-1)) :
+            self.x = 1
+            self.y = 1
+
 class Game:
     """Classe modelisant un objet game (la partie en cours)"""
 
@@ -127,7 +136,7 @@ class Game:
         # D�placement du robot
         direction = random.choice(['up', 'down', 'left', 'right'])
         if direction == 'up':
-            self.robot.move_up(self.grid.height)
+            self.robot.move_up()
         elif direction == 'down':
             self.robot.move_down(self.grid.height)
         elif direction == 'left':
@@ -153,10 +162,12 @@ if __name__ == "__main__":
 
     # Cr�ation de la grille et du robot
     grid = Grid(5, 5)
-    robot = Robot(1, 1)
+    robot = Robot(10, 10)
+    robot.check_pos_robot(grid)
+    print (robot.x, robot.y)
 
     # Cr�ation du jeu avec l'option d'affichage de la grille et une limite d'�tapes
-    game = Game(grid, robot, max_steps=1000, show_grid=True)
+    game = Game(grid, robot, max_steps=1000, show_grid = True)
 
     # Execution des tours de jeu jusqu'e ce que le robot touche la cible
     # ou que la limite d'etapes soit depassee
