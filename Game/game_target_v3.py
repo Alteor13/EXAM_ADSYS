@@ -32,6 +32,16 @@ class Grid:
         """
         self.grid = [[' ' for _ in range(self.width)] for _ in range(self.height)]
 
+    def mov (self,ry,rx,ty,tx):
+        """Insere les caracteres R et x aux positions respectives
+        du robot et de la cible
+        @param ry et rx, les coordonees du robot
+        ty et tx les coordonees de la cible
+        @return /
+        """
+        self.grid[ry][rx] = 'R'
+        self.grid[ty][tx] = 'X'
+
 class Robot:
     """Classe modelisant le robot charge de trouver la cible"""
 
@@ -147,8 +157,7 @@ class Game:
         # Affichage de la grille apr�s le d�placement du robot
         if self.show_grid:
             self.grid.clear()
-            self.grid.grid[self.robot.y][self.robot.x] = 'R'
-            self.grid.grid[self.target_y][self.target_x] = 'X'
+            self.grid.mov(self.robot.y,self.robot.x,self.target_y,self.target_x)
             self.grid.display()
 
         # V�rification si le robot touche la cible
@@ -164,7 +173,6 @@ if __name__ == "__main__":
     grid = Grid(5, 5)
     robot = Robot(10, 10)
     robot.check_pos_robot(grid)
-    print (robot.x, robot.y)
 
     # Cr�ation du jeu avec l'option d'affichage de la grille et une limite d'�tapes
     game = Game(grid, robot, max_steps=1000, show_grid = True)
