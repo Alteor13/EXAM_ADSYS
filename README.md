@@ -67,7 +67,7 @@ pip install C:\chemin\vers\votre\package\dist\nom_de_votre_package-1.0.0.tar.gz
 
 # Automatisation des phases de test
 
-Non implementee pour le moment
+Non implementee pour le moment.
 
 # Structure de l'arborescence
 
