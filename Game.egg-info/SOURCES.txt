@@ -1,0 +1,10 @@
+README.md
+setup.py
+Game/__init__.py
+Game/game_target_v3.py
+Game/test.py
+Game.egg-info/PKG-INFO
+Game.egg-info/SOURCES.txt
+Game.egg-info/dependency_links.txt
+Game.egg-info/requires.txt
+Game.egg-info/top_level.txt
